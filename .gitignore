@@ -1,0 +1,12 @@
+.DS_Store
+node_modules/
+-node_modules/
+npm-debug.log
+.nyc_output
+coverage
+.idea/
+- package-lock.json
+package-lock.json
+**/api_data.js
+dist/
+tmp/
