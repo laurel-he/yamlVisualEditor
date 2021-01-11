@@ -1,5 +1,5 @@
 {
-  "name": "aaa",
+  "name": "yamlVisualEditor",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -9,13 +9,22 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.1",
-    "web-vitals": "^0.2.4"
+    "web-vitals": "^0.2.4",
+    "@ant-design/compatible": "^1.0.4",
+    "@ant-design/icons": "^4.2.1",
+    "antd": "^4.7.3",
+    "cross-env": "^5.2.0"
   },
   "scripts": {
+    "prebuild": "npm run clean",
+    "clean": "rimraf dist/",
+    "cover": "nyc npm run test",
+    "rm-ts-node": "rimraf './node_modules/@types/node'",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "dev-he": "npm run rm-ts-node && cross-env cross-env NODE_OPTIONS='--max-old-space-size=8192' react-scripts eject webpack-dev-server --color"
   },
   "eslintConfig": {
     "extends": [
