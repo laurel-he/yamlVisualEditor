@@ -4,12 +4,12 @@ const production = (process.env.NODE_ENV === 'production');
 module.exports = {
   entry: './src/index.tsx',
   resolve: {
-      extensions: ['.wasm', '.mjs', '.js', '.json', '.jsx']
+      extensions: ['.wasm', '.mjs', '.js', '.json', '.jsx', '.ts', '.tsx']
   },
   module: {
       rules: [
           {
-              test: /\.jsx?$/, // jsx/js文件的正则
+              test: /\.tsx?$/, // jsx/js文件的正则
               exclude: /node_modules/, // 排除 node_modules 文件夹
               use: {
                   // loader 是 babel
@@ -38,7 +38,6 @@ module.exports = {
   devServer: {
     historyApiFallback: { index: '/' },
     disableHostCheck: true,
-    host: 'localhost.aijiapin.com',
     stats: 'normal',
     compress: true,
     progress: true

@@ -9,4 +9,5 @@ coverage
 package-lock.json
 **/api_data.js
 dist/
+build/
 tmp/
